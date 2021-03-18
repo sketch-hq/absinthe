@@ -141,6 +141,7 @@ defmodule Absinthe.Pipeline do
       Phase.Document.Validation.KnownArgumentNames,
       {Phase.Schema.Arguments.Parse, options},
       Phase.Schema.Arguments.Data,
+      Phase.Schema.AddDirectivesForDeprecations,
       Phase.Schema.Directives,
       Phase.Schema.Validation.DefaultEnumValuePresent,
       Phase.Schema.Validation.DirectivesMustBeValid,

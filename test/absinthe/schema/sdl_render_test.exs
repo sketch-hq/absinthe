@@ -215,6 +215,7 @@ defmodule Absinthe.Schema.SdlRenderTest do
       field :name, :string
       field :status, :order_status
       field :other_status, :status, deprecate: "See status field"
+      field :other_status2, :status, deprecate: true
       import_fields :imported_fields
     end
 
@@ -276,6 +277,7 @@ defmodule Absinthe.Schema.SdlRenderTest do
                name: String
                status: OrderStatus
                otherStatus: Status @deprecated(reason: "See status field")
+               otherStatus2: Status @deprecated
              }
              """
   end
